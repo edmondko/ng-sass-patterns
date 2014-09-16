@@ -399,7 +399,7 @@ module.exports = function (grunt) {
           options: {
             remote: 'git@github.com:edmondko/ng-sass-patterns.git',
             branch: 'master',
-            tag: pkg.version
+            // tag: pkg.version
           }
         },
         local: {
@@ -455,7 +455,7 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin',
-    'buildcontrol:pages'
+/*    'buildcontrol:pages'*/
   ]);
 
   grunt.registerTask('default', [
