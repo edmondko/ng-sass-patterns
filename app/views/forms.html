@@ -1,0 +1,225 @@
+<section id="forms">
+    <div class="container">
+        <h2 id="nav-forms" class="heading">Forms</h2>
+
+        <hr>
+
+        <form action="">
+            <div class="row">
+                <div class="col-half">
+                    <fieldset>
+                        <legend>Inputs</legend>
+                        <!--
+							For the floating labels to work properly without any javascript we need to:
+								1.  add "float-label" class to the "field-group" wrapper
+								2. The label tag must be insert after the input field with class "placeholder"
+								3. the input/textarea element must have required attribute
+							-->
+                        <div class="field-group float-label">
+                            <input type="text" id="demo-input-1" required pattern=".{1,}">
+                            <label class="placeholder" for="demo-input-1">This is a label</label>
+                            <p class="help">This is a contextual help for the field above.</p>
+                        </div>
+                        <!-- end field-group -->
+
+                        <div class="field-group float-label field-error">
+                            <input type="text" id="demo-input-2" required>
+                            <label class="placeholder" for="demo-input-2">Error field</label>
+
+                            <p class="help">This is an error message for the field above.</p>
+                        </div>
+                        <!-- end field-group -->
+
+                        <div class="field-group float-label">
+                            <textarea name="demo-textarea" id="demo-textarea" required></textarea>
+                            <label class="placeholder" for="demo-textarea">This is a label</label>
+                        </div>
+                        <!-- end field-group -->
+                    </fieldset>
+
+                    <blockquote>
+                        For the floating labels to work properly without any javascript we need to:
+                        <ol>
+                            <li>add "float-label" class to the "field-group" wrapper</li>
+                            <li>The label tag must be insert after the input field with class "placeholder"</li>
+                            <li>the input/textarea element must have required attribute</li>
+                        </ol>
+                    </blockquote>
+                    <pre>
+							<code class="language-markup">
+&lt;div class=&quot;field-group float-label&quot;&gt;
+	&lt;input type=&quot;text&quot; id=&quot;demo-input-1&quot; required pattern=&quot;.{1,}&quot;&gt;
+	&lt;label class=&quot;placeholder&quot; for=&quot;demo-input-1&quot;&gt;This is a label&lt;/label&gt;
+	&lt;p class=&quot;help&quot;&gt;This is a contextual help for the field above.&lt;/p&gt;
+&lt;/div&gt;
+							</code>
+						</pre>
+                </div>
+                <!-- end row-half -->
+
+                <div class="col-half">
+                    <fieldset>
+                        <legend>Radio buttons and checkboxes</legend>
+
+                        <div class="field-group">
+                            <input type="radio" name="demo-radio" id="demo-radio-1">
+                            <label for="demo-radio-1">Radio 1</label>
+
+                            <input type="radio" name="demo-radio" id="demo-radio-2">
+                            <label for="demo-radio-2">Radio 2</label>
+
+                            <input type="radio" name="demo-radio" id="demo-radio-3">
+                            <label for="demo-radio-3">Radio 3</label>
+                        </div>
+
+                        <div class="field-group">
+                            <input type="checkbox" id="demo-checkbox" name="demo-checkbox">
+                            <label for="demo-checkbox">This is a checkbox</label>
+                        </div>
+                    </fieldset>
+                    <blockquote>
+                        If you want to use the custom Radio/Checkbox Inputs you need to put the &lt;label&gt; after the &lt;input&gt;
+                    </blockquote>
+                    <pre>
+							<code class="language-markup">
+&lt;input type=&quot;radio&quot; name=&quot;demo-radio&quot; id=&quot;demo-radio-1&quot;&gt;
+&lt;label for=&quot;demo-radio-1&quot;&gt;Radio 1&lt;/label&gt;
+
+&lt;input type=&quot;radio&quot; name=&quot;demo-radio&quot; id=&quot;demo-radio-2&quot;&gt;
+&lt;label for=&quot;demo-radio-2&quot;&gt;Radio 2&lt;/label&gt;
+							</code>
+						</pre>
+                </div>
+                <!-- end row-half -->
+            </div>
+            <!-- end row -->
+        </form>
+
+        <div class="row">
+            <div class="col-third">
+                <form action="">
+                    <fieldset>
+                        <legend>Floating Labels Form</legend>
+
+                        <div class="field-group float-label">
+                            <input type="text" id="sign-in-username" name="sign-in-username" required>
+                            <label class="placeholder" for="sign-in-username">Username:
+                                <span class="required">*</span>
+                            </label>
+                        </div>
+
+                        <div class="field-group float-label">
+                            <input type="password" pattern=".{3,}" id="sign-in-pwd" name="sign-in-pwd" required>
+                            <label class="placeholder" for="sign-in-pwd">Password:
+                                <span class="required">*</span>
+                            </label>
+                        </div>
+
+                        <div class="field-group">
+                            <input type="checkbox" id="sign-in-checkbox" name="sign-in-checkbox" />
+                            <label for="sign-in-checkbox">Remember me</label>
+                        </div>
+                        <div class="field-group  btn-cnt right">
+                            <input type="submit" class="btn" value="Sign In">
+                        </div>
+                        <p>
+                            <em>
+                                <span class="required">*</span>required fields</em>
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="col-third">
+                <form action="">
+                    <fieldset>
+                        <legend>Normal Sign-up Form</legend>
+
+                        <div class="field-group">
+                            <label for="sign-up-email">Email address:
+                                <span class="required">*</span>
+                            </label>
+                            <input type="email" id="sign-up-email" name="sign-up-email" required>
+                            <p class="help">Please enter valid email</p>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="sign-up-name">Username:
+                                <span class="required">*</span>
+                            </label>
+                            <input type="text" id="sign-up-username" name="sign-up-username">
+                        </div>
+
+                        <div class="field-group">
+                            <label for="sign-up-pwd">Password:
+                                <span class="required">*</span>
+                            </label>
+                            <input type="password" id="sign-up-pwd" name="sign-up-pwd" required>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="sign-up-confirm-pwd">Confirm Password:
+                                <span class="required">*</span>
+                            </label>
+                            <input type="password" id="sign-up-confirm-pwd" name="sign-up-confirm-pwd">
+                        </div>
+
+                        <div class="field-group btn-cnt right">
+                            <input type="submit" class="btn positive raised" value="Sign Up">
+                        </div>
+
+                        <p>
+                            <em>
+                                <span class="required">*</span>required fields</em>
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="col-third">
+                <form action="">
+                    <fieldset>
+                        <legend>Contact Form</legend>
+
+                        <div class="field-group">
+                            <label for="contact-name">Name:
+                                <span class="required">*</span>
+                            </label>
+                            <input type="text" id="contact-name" name="contact-name">
+                        </div>
+
+                        <div class="field-group">
+                            <label for="contact-email">Email address:
+                                <span class="required">*</span>
+                            </label>
+                            <input type="email" id="contact-email" name="contact-email">
+                        </div>
+
+                        <div class="field-group">
+                            <label for="contact-website">Website:</label>
+                            <input type="url" id="contact-website" name="contact-website">
+                        </div>
+
+                        <div class="field-group">
+                            <label for="contact-textarea">Message:
+                                <span class="required">*</span>
+                            </label>
+                            <textarea name="contact-textarea" id="contact-textarea" cols="30" rows="10" class="field-fw"></textarea>
+                        </div>
+
+                        <div class="field-group  btn-cnt right">
+                            <button type="submit" class="btn"><i class="fa fa-paper-plane"></i>Send Message</button>
+
+                        </div>
+
+                        <p>
+                            <em>
+                                <span class="required">*</span>required fields</em>
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end container -->
+</section>

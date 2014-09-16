@@ -1,0 +1,88 @@
+html,body {
+	position: relative;
+	min-width: 100%;
+	min-height: 100%;
+    padding-bottom: 4em;
+    position: relative;
+    min-height: 100%;
+}
+
+#stickyHeader {
+    display: block;
+    overflow: hidden;
+    background-color: transparent;
+}
+#heading {
+    text-align: center;
+    font-family: "Lobster";
+    font-size: 4em;
+    margin: 0 0 .3em;
+    padding: 0;
+}
+#mainNav {
+    transition: all .3s ease-out;
+    text-align: center;
+    padding: 1em;
+    z-index: 100;
+    &.stuck {
+        padding: .5em;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #FFFFFF;
+        border-bottom: 1px solid #CCCCCC;
+    }
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .85);
+    z-index: 1000;
+    .btn-cnt {
+        padding: 1em;
+        margin: 0;
+    }
+    .flat.btn {
+        color: #FFFFFF;
+    }
+    small {
+        color: #FFFFFF;
+        padding: 0 $baseline;
+    }
+}
+
+.animations {
+    .btn {
+        width: 100%;
+    }
+}
+section .container {
+    padding: 2em 0;
+}
+.heading {
+    margin-top: 0;
+    position: relative;
+}
+#main {
+    overflow: hidden;
+    position: relative;
+    min-height: 1000px;
+}
+
+.animation.ng-enter, .animation.ng-leave {
+    position: absolute;
+    width: 100%;
+    animation-duration: 1s;
+}
+.animation.ng-enter {
+
+    animation-name: bounceInLeft;
+    z-index: 88;
+}
+.animation.ng-leave {
+    animation-name: bounceOutRight;
+    z-index: 99;
+}
