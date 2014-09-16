@@ -391,13 +391,13 @@ module.exports = function (grunt) {
         },
         pages: {
           options: {
-            remote: 'git@github.com:edmondko/ng-sass-patterns.git',
+            remote: 'https://github.com/edmondko/ng-sass-patterns.git',
             branch: 'gh-pages'
           }
         },
         heroku: {
           options: {
-            remote: 'git@github.com:edmondko/ng-sass-patterns.git',
+            remote: 'https://github.com/edmondko/ng-sass-patterns.git',
             branch: 'master',
             // tag: pkg.version
           }
