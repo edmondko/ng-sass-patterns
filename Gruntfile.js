@@ -380,7 +380,35 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
-    }
+    },
+
+    buildcontrol: {
+        options: {
+          dir: 'dist',
+          commit: true,
+          push: true,
+          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+        },
+        pages: {
+          options: {
+            remote: 'git@github.com:edmondko/ng-sass-patterns.git',
+            branch: 'gh-pages'
+          }
+        },
+        heroku: {
+          options: {
+            remote: 'git@github.com:edmondko/ng-sass-patterns.git',
+            branch: 'master',
+            tag: pkg.version
+          }
+        },
+        local: {
+          options: {
+            remote: '../',
+            branch: 'build'
+          }
+        }
+      }
   });
 
 
@@ -426,7 +454,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'buildcontrol:pages'
   ]);
 
   grunt.registerTask('default', [
