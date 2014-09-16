@@ -55,6 +55,7 @@ angular
             .state('animations', {
                 url: '/animations',
                 templateUrl: 'views/animations.html',
+                controller: 'MainCtrl'
             })
             .state('404', {
             	url: '/404',
