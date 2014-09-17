@@ -13,7 +13,7 @@ angular.module('ngSassPatternsApp')
             link: function (scope, element, attrs) {
             	/* Bind click event on animation-btn directive*/
             	element.bind('click', function (e) {
-        			loadAnimation(e.target)
+        			loadAnimation(e.target);
             	});
 
             	/*Load animation from the title of the button */

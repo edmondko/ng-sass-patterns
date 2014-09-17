@@ -20,7 +20,7 @@ angular
         'sticky'
     ])
     .config(function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('404');
+        $urlRouterProvider.when('', '/home').when('/', '/home').otherwise('404');
 
         $stateProvider
 	        .state('home', {
