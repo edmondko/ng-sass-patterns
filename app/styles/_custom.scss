@@ -2,11 +2,10 @@ html,body {
 	position: relative;
 	min-width: 100%;
 	min-height: 100%;
-    padding-bottom: 4em;
-    position: relative;
-    min-height: 100%;
 }
-
+body {
+    padding-bottom: 4em;
+}
 #stickyHeader {
     display: block;
     overflow: hidden;
@@ -20,19 +19,19 @@ html,body {
     padding: 0;
 }
 #mainNav {
-    transition: all .3s ease-out;
+    transition: all .2s ease-in;
     text-align: center;
     padding: 1em;
     z-index: 100;
-    &.stuck {
-        padding: .5em;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background-color: #FFFFFF;
-        border-bottom: 1px solid #CCCCCC;
-    }
+}
+.stuck {
+    padding: .5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 5px #EDEDED;
 }
 footer {
     position: fixed;
@@ -67,11 +66,15 @@ section .container {
     position: relative;
 }
 #main {
+    margin-bottom: 5em;
     overflow: hidden;
     position: relative;
-    min-height: 1000px;
 }
 
+.animation {
+    background-color: #FFF;
+
+}
 .animation.ng-enter, .animation.ng-leave {
     position: absolute;
     width: 100%;
@@ -79,10 +82,10 @@ section .container {
 }
 .animation.ng-enter {
 
-    animation-name: bounceInLeft;
-    z-index: 88;
+    animation-name: bounceInRight;
+    z-index: 99;
 }
 .animation.ng-leave {
-    animation-name: bounceOutRight;
-    z-index: 99;
+    animation-name: hinge;
+    z-index: 88;
 }

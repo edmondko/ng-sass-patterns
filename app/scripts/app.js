@@ -17,7 +17,7 @@ angular
         'ngSanitize',
         'ngTouch',
         'ui.router',
-        'sticky'
+        'sticky',
     ])
     .config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.when('', '/home').when('/', '/home').otherwise('404');
