@@ -1,64 +1,36 @@
-<section id="buttons">
+<section id="buttons" ng-controller="MainCtrl">
     <div class="container">
         <h2 class="heading">Buttons</h2>
         <hr>
         <div class="row">
             <div class="col-4">
                 <h3>Button styles</h3>
-                <p>
-                    <button class="btn flat">Flat</button>
-                </p>
-                <p>
-                    <button class="btn">Default</button>
-                </p>
-                <p>
-                    <button class="btn raised">Raised</button>
+                <p ng-repeat="style in buttons.styles">
+                    <button class="btn {{style}}">{{style}}</button>
                 </p>
 
-                <p class="btn-cnt">
+
+                <!-- <p class="btn-cnt">
                     <button class="btn circle flat"><i class="fa fa-remove"></i>
                     </button>
                     <button class="btn circle "><i class="fa fa-sun-o"></i>
                     </button>
                     <button class="btn circle raised"><i class="fa fa-university "></i>
                     </button>
-                </p>
+                </p> -->
             </div>
             <div class="col-4">
                 <h3>Button Colors</h3>
-                <p>
-                    <button class="btn">Default</button>
-                </p>
-                <p>
-                    <button class="btn positive">positive</button>
-                </p>
-                <p>
-                    <button class="btn neutral">neutral</button>
-                </p>
-                <p>
-                    <button class="btn negative">negative</button>
+                <p ng-repeat="color in buttons.colors">
+                    <button class="btn {{color}}">{{color}}</button>
                 </p>
             </div>
             <div class="col-4">
                 <h3>Button sizes</h3>
-                <p>
-                    <button class="btn small">Small</button>
+                <p ng-repeat="size in buttons.sizes">
+                    <button class="btn {{size}}">{{size}}</button>
                 </p>
-                <p>
-                    <button class="btn">Default</button>
-                </p>
-                <p>
-                    <button class="btn large">Large</button>
-                </p>
-
             </div>
-            <!-- <div class="col-3">
-				<h3>HTML elements</h3>
-				<p><button class="btn">Button</button></p>
-				<p><a href="" class="btn positive">Anchor Button</a></p>
-				<p><input type="submit" class="btn negative" value="Submit button"></p>
-				<p><input type="button" class="btn neutral" value="Button input"></p>
-			</div> -->
         </div>
         <div class="row">
             <div class="col-4">
